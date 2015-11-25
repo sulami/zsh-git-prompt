@@ -1,6 +1,5 @@
 module BranchParse where
 
-import Control.Applicative ((<$>), (<*>), (<*), (*>), (<$), pure)
 import Text.Parsec (digit, string, char, eof, anyChar,
                     many, many1, manyTill, noneOf, between,
                     parse, ParseError, (<|>), try)
