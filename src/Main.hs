@@ -32,5 +32,5 @@ main = do
   mhash <- unsafeInterleaveIO gitrevparse -- defer the execution until we know we need the hash
   let result = do status <- mstatus
                   strings <- stringsFromStatus mhash status
-                  return $ intercalate " " strings
+                  return $ unwords strings
   putStr $ fromMaybe "" result

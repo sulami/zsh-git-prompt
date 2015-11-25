@@ -97,7 +97,7 @@ branchParser =
   <|> branchOnly
 
 branchParser' :: Parser MBranchInfo
-branchParser' = (string "## ") >> branchParser
+branchParser' = string "## " >> branchParser
 
 inBrackets :: Parser Distance
 inBrackets = between (char '[') (char ']') (behind <|> try aheadBehind <|> ahead)
